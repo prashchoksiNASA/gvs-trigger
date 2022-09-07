@@ -6,11 +6,6 @@ int triggered = 0;
 
 void setup() {
   Serial.begin(9600);
-  //Serial.println("<Arduino is ready>");
-  delay(1500);
-
-  // NOTE: the analog input here is set to 0 but can be any unconnected input.  The Arduino "noise" fluctuations for this unconnected terminal will provide a random starting point for the Arduino randNumber() algorithm.
-  // This prevents us from getting the same random sequence every time the software runs.  If it's preferred to get the same random sequence each time, simply replace analogRead(0) with any constant value.
   randomSeed(analogRead(0));
 
 }
@@ -25,11 +20,8 @@ void loop() {
 
   // Recording time at which the pulse occurred in milliseconds from program start
   float milliseconds = millis();
-
   Serial.println(milliseconds);
 
-  // Uncomment below if you need to see "Firing!" in the serial port for testing.
-  // Serial.println("Firing!");
   for (int i = 0; i < 3; i++) {
     analogWrite(12, waveformsTable[3][i]);
 
