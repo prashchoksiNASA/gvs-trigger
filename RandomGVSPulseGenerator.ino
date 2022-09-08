@@ -12,8 +12,7 @@ void setup() {
 
 void loop() {
 
-  // Every iteration of this function should produce a new random number in the specified range.
-  // NOTE: NEED TO SCALE THE BELOW RANDOM RANGES FOR DESIRED VALUES MILLISECONDS
+  // Every iteration of this function produces a new random number in the specified range of the random() argument in milliseconds.
   long rand = random(15000, 120000);
   delay(rand);
 
