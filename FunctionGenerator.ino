@@ -1,3 +1,5 @@
+// This is the original script written by MP, where the Arduino pulse is manually triggered by a spacebar entry.
+
 /*
 
  */
